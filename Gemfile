@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 gem 'httparty'  # API requests
 gem 'faker'     # For fake data
-gem 'bootstrap', '~> 5.0.0' # styling
+gem 'bootstrap', '~> 5.3.3' # styling
 gem 'kaminari'  # For pagination
 
 
