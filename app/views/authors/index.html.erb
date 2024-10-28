@@ -1,0 +1,13 @@
+<h1>Authors</h1>
+
+<%= form_with url: search_authors_path, method: :get, local: true do %>
+  <%= text_field_tag :query, params[:query], placeholder: "Search for authors" %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<ul>
+  <% @authors.each do |author| %>
+    <li><%= link_to author.name, author_path(author) %></li>
+  <% end %>
+</ul>
+
