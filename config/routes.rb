@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "pages/about"
   root 'books#index'
   
   resources :books, only: [:index, :show] do
@@ -12,6 +13,11 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+
+  resources :books, only: [:index, :show]
+  resources :authors, only: [:index, :show]
+
+  get 'about', to: 'pages#about'  # New route for the about page
 
   get "up" => "rails/health#show", as: :rails_health_check
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
