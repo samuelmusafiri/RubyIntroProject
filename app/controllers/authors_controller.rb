@@ -13,5 +13,6 @@ class AuthorsController < ApplicationController
     @authors = Author.where("name LIKE ?", "%#{query}%")
     render :index
   end
+  #Search function for authors
 end
 
