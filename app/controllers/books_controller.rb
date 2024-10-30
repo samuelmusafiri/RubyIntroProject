@@ -13,6 +13,7 @@ class BooksController < ApplicationController
     @books = Book.where("title LIKE ?", "%#{query}%")
     render :index
   end
+  #New search function for books
 
   # New action for displaying the form to create a new book
   def new
